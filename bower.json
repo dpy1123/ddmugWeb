@@ -1,0 +1,33 @@
+{
+  "name": "ddmugWeb",
+  "version": "0.0.1",
+  "description": "ddmug front",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "html5",
+    "music",
+    "game"
+  ],
+  "authors": [
+    "dd"
+  ],
+  "license": "MIT",
+  "homepage": "http://192.243.115.171:8080/ddmug",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.4",
+    "angular-resource": "~1.4.5",
+    "angular-route": "~1.4.4",
+    "angular-strap": "~2.3.1",
+    "bootstrap": "~3.3.5",
+    "moment": "~2.10.6"
+  }
+}

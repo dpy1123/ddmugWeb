@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ddmugApp">
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ddmug</title>
+		<link rel="icon" type="image/png" href="favicon.ico" />
+
+		<link href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+		<link href="stylesheets/style.css" rel="stylesheet">
+
+		<style>
+			.top-nav>li {
+			    display: inline-block;
+			    float: left;
+			}
+		</style>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default" role="navigation" bs-navbar>
+				<!-- angularStrap指令 -->
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header ">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+						<span class="sr-only">Toggle navigation</span>
+						<!-- 移动模式下的菜单按钮 -->
+						<span class="icon-bar"></span>
+						<!-- 菜单按钮中的三行线 -->
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand">LOGO</a>
+				</div>
+
+				<ul class="nav navbar-nav navbar-right top-nav">
+					<li>
+						<a><span class="glyphicon glyphicon-registration-mark"></span>注册</a>
+					</li>
+					<li>
+						<a><span class="glyphicon glyphicon-log-in"></span>登录</a>
+					</li>
+				</ul>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse " id="menu">
+
+					<ul class="nav navbar-nav">
+						<li data-match-route="/$"><a>动画<span class="badge">54</span></a></li>
+						<li data-match-route="/page-one.*" class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">音乐<span class="badge">4</span><span class="caret"></span></a>
+							<ul class="customs-menu dropdown-menu" role="menu">
+								<li><a href="/page-one/sub1">1</a></li>
+								<li><a href="#/page-one/sub2">2 action</a></li>
+								<li><a href="#/page-one/sub3">3 else here</a></li>
+								<li class="divider"></li>
+								<li><a href="#/page-one/sub4">11 link</a></li>
+								<li class="divider"></li>
+								<li><a href="#/page-one/sub5">22 more separated link</a></li>
+							</ul>
+						</li>
+						<li data-match-route="/page-two"><a href="#/page-two">游戏</a></li>
+					</ul>
+
+				</div>
+				<!-- /.navbar-collapse -->
+			</nav>
+
+		<div class="gridContainer clearfix" ng-view>sss</div>
+
+		<script src="../bower_components/jquery/dist/jquery.js"></script>
+		<script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="../bower_components/angular/angular.js"></script>
+		<script src="../bower_components/angular-strap/dist/angular-strap.js"></script>
+		<script src="../bower_components/angular-strap/dist/angular-strap.tpl.js"></script>
+		<script src="../bower_components/angular-route/angular-route.js"></script>
+		<script src="../bower_components/angular-resource/angular-resource.js"></script>
+		<!--<script src="../bower_components/angular-messages.js"></script>
+		<script src="../bower_components/angular-cookies.js"></script>-->
+		<script src="../bower_components/moment/moment.js"></script>
+
+		<script src="app.js"></script>
+		<script src="controllers/main.js"></script>
+		<script src="services/show.js"></script>
+	</body>
+
+</html>
