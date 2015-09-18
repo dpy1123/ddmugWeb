@@ -1,4 +1,4 @@
-app.controller('MainCtrl', ['$scope', 'ShowServ', function($scope, ShowServ) {
+app.controller('MainCtrl', ['$scope', 'MusicServ', function($scope, MusicServ) {
 
     $scope.alphabet = ['0-9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
       'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
@@ -12,15 +12,15 @@ app.controller('MainCtrl', ['$scope', 'ShowServ', function($scope, ShowServ) {
 
     $scope.headingTitle = 'Top 10';
 
-    $scope.shows = ShowServ.query();
+    $scope.shows = MusicServ.query();
 
     $scope.filterByGenre = function(genre) {
-      $scope.shows = ShowServ.query({ genre: genre });
+      $scope.shows = MusicServ.query({ genre: genre });
       $scope.headingTitle = genre;
     };
 
     $scope.filterByAlphabet = function(char) {
-      $scope.shows = ShowServ.query({ alphabet: char });
+      $scope.shows = MusicServ.query({ alphabet: char });
       $scope.headingTitle = char;
     };
   }]);
