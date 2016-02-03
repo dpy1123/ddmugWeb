@@ -24,13 +24,31 @@
 		</div>
 		<div class="panel-body">
 			<div class="row show-list">
-				<div class="col-xs-4 col-md-3" ng-repeat="show in shows | filter:query | orderBy:'rating':true">
+				<!--<div class="col-xs-4 col-md-3" ng-repeat="show in shows | filter:query | orderBy:'rating':true">
 					<a href="/shows/{{show._id}}">
 						<img class="img-rounded" ng-src="{{show.poster}}" width="100%" />
 					</a>
 					<div class="text-center">
 						<a href="/shows/{{show._id}}">{{show.name}}</a>
 						<p class="text-muted">Episodes: {{show.episodes.length}}</p>
+					</div>
+				</div>-->
+				<div class="col-xs-4 col-md-3" ng-repeat="data in list">
+					<div class="text-center">
+						<p>
+							{{data.article_title}} - {{data.article_price}}
+						</p>
+						
+						<p>
+							
+						{{data.top_category}} - 
+						{{data.article_mall}} - 
+						{{data.article_date_full}}-
+						{{data.article_worthy}}/{{data.article_unworthy}} - 
+						{{data.article_comment}}
+						</p>
+						
+						
 					</div>
 				</div>
 			</div>
